@@ -1,11 +1,10 @@
 <script setup>
-import { RouterLink, useRouter } from "vue-router";
+import { RouterLink, useRoute } from "vue-router";
 import logo from "@/assets/img/logo.png";
 
 //
-const router = useRouter();
-const isActiveLink = (route) =>
-  route === router.currentRoute.value.path ? "bg-green-900" : "";
+const route = useRoute();
+const isActiveLink = (r) => (r === route.path ? "bg-green-900" : "");
 </script>
 
 <!--  -->
