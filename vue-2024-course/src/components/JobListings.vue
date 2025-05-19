@@ -24,7 +24,7 @@ const state = reactive({
 onMounted(async () => {
   try {
     state.isLoading = true;
-    const response = await axios.get("http://localhost:5000/jobs");
+    const response = await axios.get("/api/jobs");
     await new Promise((resolve) => setTimeout(resolve, Math.random() * 1000));
     state.jobs = response.data;
   } catch (error) {
